@@ -65,14 +65,14 @@ const Banner: React.FC = () => {
                         Full Stack Web Developer
                     </h1>
                     <p className="text-lg">
-                        Hi, I'm <strong className="text-lg font-bold">Norman Aranez</strong>, a passionate full-stack developer based in the Philippines with a keen interest in modern
+                        Hi, {`I'm`} <strong className="text-lg font-bold">Norman Aranez</strong>, a passionate full-stack developer based in the Philippines with a keen interest in modern
                         technology. My expertise lies in a wide range of skills, including <strong className="text-lg font-bold"> React</strong>,
                         <strong className="text-lg font-bold"> TypeScript</strong>, <strong className="text-lg font-bold"> Next.js</strong>, the
                         <strong className="text-lg font-bold"> MERN stack (MongoDB, Express.js, React, Node.js)</strong> ,
                         <strong className="text-lg font-bold"> GraphQL</strong>, and <strong className="text-lg font-bold"> Node.js</strong>. With my
                         strong foundation in these technologies, I enjoy building robust and innovative web applications that deliver
                         exceptional user experiences. I thrive on staying up-to-date with the latest trends and best practices in the
-                        development world, always seeking new challenges to expand my knowledge and skills. Let's bring your next project to
+                        development world, always seeking new challenges to expand my knowledge and skills. {`Let's`} bring your next project to
                         life and create something extraordinary together!
                     </p>
                   </div>
