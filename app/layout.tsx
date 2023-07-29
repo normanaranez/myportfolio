@@ -1,6 +1,8 @@
+import { cn } from '@/lib/utils'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
+import NavBar from '@/components/navigation/Navbar'
 
 const inter = Nunito({ subsets: ['latin'] })
 
@@ -16,7 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cn('flex flex-col w-full dark', inter.className)}>
+        <NavBar />
+        <main className="flex relative">
+          {children}
+        </main>
+        {/* <footer>footer</footer> */}
+      </body>
     </html>
   )
 }

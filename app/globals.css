@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
  
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #4a5568; /* Replace with your desired color */
+    border-radius: 8px;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
