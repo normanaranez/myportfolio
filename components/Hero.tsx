@@ -32,21 +32,34 @@ const Hero: React.FC = () => {
         loop: true,
     };
 
-    const scaleVariants = {
-      whileInView: {
-        scale: [0, 1],
-        opacity: [0, 1],
-        transition: {
-          duration: 1,
-          ease: 'easeInOut',
-        },
+    // const scaleVariants = {
+    //   whileInView: {
+    //     scale: [0, 1],
+    //     opacity: [0, 1],
+    //     transition: {
+    //       duration: 1,
+    //       ease: 'easeInOut',
+    //     },
+    //   },
+    // };
+
+    const animationVariants = {
+      initial: {
+        opacity: 0,
+        x: -20, // Adjust the value based on how far you want the element to move
+      },
+      animate: {
+        opacity: 1,
+        x: 0,
       },
     };
     
     return (
         <motion.section 
-          variants={scaleVariants}
-          whileInView={scaleVariants.whileInView}
+          initial={animationVariants.initial}
+          animate={animationVariants.animate}
+          variants={animationVariants}
+          // whileInView={scaleVariants.whileInView}
           className="flex relative pt-[104px] md:h-screen md:pt-0"
         >
             <Container className="flex">
