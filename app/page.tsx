@@ -4,16 +4,29 @@ import Container from "@/components/Container";
 import Image from "next/image";
 
 
-
-import Banner from "@/components/Banner";
+import Hero from "@/components/Hero";
 
 const Home: React.FC = () => {
   
   return (
     <div className="flex flex-col w-full relative">
         
-        <Banner />
+        {/* <Banner /> */}
 
+        <Hero />
+
+        {/* <section>
+          skills
+        </section>
+        <section>
+          projects
+        </section>
+        <section>
+          testimonials
+        </section>
+        <section>
+          contacts
+        </section> */}
         {/* <section className="flex">
           <Container className="flex ">
             <h3>Tech Stack</h3>
