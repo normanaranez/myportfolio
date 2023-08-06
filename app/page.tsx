@@ -5,6 +5,7 @@ import Image from "next/image";
 
 
 import Hero from "@/components/Hero";
+import Projects from "@/components/projects/Projects";
 
 const Home: React.FC = () => {
   
@@ -15,6 +16,8 @@ const Home: React.FC = () => {
 
         <Hero />
 
+        <Projects />
+        
         {/* <section>
           skills
         </section>
@@ -29,7 +32,7 @@ const Home: React.FC = () => {
         </section> */}
         {/* <section className="flex">
           <Container className="flex ">
-            <h3>Tech Stack</h3>
+            <h3>Tech Projects</h3>
             <div className="flex  gap-4 ">
               <div className="">
                 test

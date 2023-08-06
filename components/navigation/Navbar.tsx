@@ -6,16 +6,21 @@ import Container from "@/components/Container";
 import { Button } from "../ui/button";
 import { GrMenu, GrClose } from 'react-icons/gr';
 import { useState } from "react";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
+import { menus } from "@/constants";
 
 const NavBar: React.FC = () => {
 
-	const menus: string[] = ['Home', 'About', 'Projects', 'Contacts'];
-
     const [toggle, setToggle] = useState<boolean>(false);
 
+    const onToggle = () => {
+
+        console.log('toggle', toggle);
+
+        setToggle((prevToggle) => !prevToggle);
+    };
+
 	return (
-		<header className="fixed flex w-full items-center py-8 shadow-lg dark:bg-transparent">
+		<header className="fixed z-50 flex w-full items-center py-8 shadow-lg bg-inherit">
 			<Container>
                 <div className="flex flex-1 gap-4 justify-between">
                     <div className="flex items-center">
@@ -30,44 +35,34 @@ const NavBar: React.FC = () => {
                         <h3 className="text-[14px] font-bold md:flex md:text-[16px]">Norman Aranez</h3>
                     </div>
                     
-                    {/* desktop */}
-                    <div className="hidden md:flex justify-center gap-12">
-                        {menus.map((menu) => (
-                            <a 
-                                key={menu} href={`#${menu}`} 
-                                className="text-[14px] font-bold md:text-[16px] cursor-pointer hover"
+                    <div className="flex">
+                        {/* desktop */}
+                        <div className="flex justify-center gap-2">
+                            {menus.map((menu) => (
+                                <a 
+                                    
+                                    key={menu.label}
+                                    href={`#${menu.label}`}
+                                    className="hidden md:flex text-[14px] md:text-[16px] cursor-pointer py-2 px-4 rounded-[20px] justify-center items-center hover:bg-gray-100"
+                                >
+                                    {menu.label}
+                                </a>
+                            ))}
+                            <Button 
+                                variant="default" 
+                                onClick={(e) => console.log('test')}
+                                className="text-[14px] font-bold md:text-[16px] cursor-pointer"
                             >
-                                {menu}
-                            </a>
-                        ))}
-                    </div>
+                                Contact Now
+                            </Button>
+                        </div>
 
-                    {/* mobile */}
-                    <div className="flex md:hidden">
-                        <DropdownMenu
-                            open={toggle}
-                            onOpenChange={(open: boolean) => setToggle(open)}
-                            
-                        >
-                            <DropdownMenuTrigger asChild>
-                                <Button variant="default" size="icon" >
-                                    {toggle ? <GrClose className="h-4 w-4" /> : <GrMenu className="h-4 w-4" />}
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent className="w-auto px-[15px] py-[15px]">
-                                <div className="flex flex-col flex-1 gap-8">
-                                    {menus.map((menu) => (
-                                        <div 
-                                            key={menu} 
-                                            className="text-[14px] font-bold md:text-[16px] cursor-pointer hover:text-[#808080"
-                                            onClick={() => setToggle((prevToogle) => !prevToogle)}
-                                        >
-                                            {menu}
-                                        </div>
-                                    ))}
-                                </div>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
+                        {/* mobile */}
+                        <div className="flex md:hidden">
+                            <Button variant="ghost" size="icon" onClick={(e) => console.log('test')}>
+                                {toggle ? <GrClose className="h-4 w-4" /> : <GrMenu className="h-4 w-4" />}
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </Container>
