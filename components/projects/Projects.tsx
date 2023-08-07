@@ -105,6 +105,7 @@ const Projects: React.FC = () => {
                                     <h4>{project.title}</h4>
                                     <p>{project.description}</p>
                                 </div>
+                                
                                 <Image 
                                     src={project.image}
                                     alt={project.title}
