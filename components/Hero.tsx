@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
         // position: 'absolute',
         height: '100%',
         width: '100%',
-        // maxWidth: '70%',
+        maxWidth: '70%',
         display: 'flex',
         alignContent: 'center',
         justifyContent: 'center',

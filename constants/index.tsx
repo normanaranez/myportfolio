@@ -1,4 +1,7 @@
 import { BiLogoGraphql, BiLogoMongodb, BiLogoReact, BiLogoVuejs } from 'react-icons/bi';
+import Redview from '@/public/projects/redview1.png';
+import Dominoone from '@/public/projects/dominoone1.png';
+import { StaticImageData } from 'next/image';
 
 export interface IMainMenu {
     label: string;
@@ -36,26 +39,19 @@ export interface IProjects {
     description: string;
     github?: string;
     url?: string;
+    image: StaticImageData;
 }
 export const projects: IProjects[] = [
     {
         title: 'Redview',
         description: 'LEGALTECH FOR THE BUSINESS OF LAW',
-        url: 'https://www.redraincorp.com/'
+        url: 'https://www.redraincorp.com/',
+        image: Redview
     },
     {
         title: 'Dominoone',
         description: 'DominoOne was designed to remove the gap between leadership and employees',
-        url: 'https://www.redraincorp.com/'
+        url: 'https://www.redraincorp.com/',
+        image: Dominoone
     },
-    {
-        title: 'Redview',
-        description: 'LEGALTECH FOR THE BUSINESS OF LAW',
-        url: 'https://www.redraincorp.com/'
-    },
-    {
-        title: 'Redview',
-        description: 'LEGALTECH FOR THE BUSINESS OF LAW',
-        url: 'https://www.redraincorp.com/'
-    }
 ]

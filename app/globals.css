@@ -100,4 +100,10 @@
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
   }
+
+  
+  .project-slider .carousel-slider {
+    display: flex;
+    align-items: center;
+  }
 }
